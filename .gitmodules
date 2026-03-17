@@ -1,0 +1,3 @@
+[submodule "f411/libopencm3"]
+	path = f411/libopencm3
+	url = https://github.com/libopencm3/libopencm3
