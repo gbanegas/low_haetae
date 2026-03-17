@@ -1,0 +1,594 @@
+
+;; Function cryptolab_haetae5_decompose_z1 (cryptolab_haetae5_decompose_z1, funcdef_no=0, decl_uid=6105, cgraph_uid=1, symbol_order=0)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+(note 6 1 48 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 48 6 49 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [4  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "decompose.c":15:73 384 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [4  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 49 48 50 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -44 [0xffffffffffffffd4]))) "decompose.c":15:73 7 {*arm_addsi3}
+     (nil))
+(insn 50 49 51 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "decompose.c":15:73 385 {stack_tie}
+     (nil))
+(insn/f 51 50 52 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "decompose.c":15:73 7 {*arm_addsi3}
+     (nil))
+(note 52 51 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 52 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [3 highbits+0 S4 A32])
+        (reg:SI 0 r0 [ highbits ])) "decompose.c":15:73 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [3 lowbits+0 S4 A32])
+        (reg:SI 1 r1 [ lowbits ])) "decompose.c":15:73 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 4 3 5 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [2 r+0 S4 A32])
+        (reg:SI 2 r2 [ r ])) "decompose.c":15:73 760 {*thumb2_movsi_vfp}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg:SI 3 r3 [124])
+        (const_int 256 [0x100])) "decompose.c":16:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 9 8 10 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [1 alpha+0 S4 A32])
+        (reg:SI 3 r3 [124])) "decompose.c":16:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (parallel [
+            (set (reg:SI 3 r3 [125])
+                (const_int 8 [0x8]))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":17:15 1050 {*thumb2_movsi_shortim}
+     (nil))
+(insn 11 10 12 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [1 log_alpha+0 S4 A64])
+        (reg:SI 3 r3 [125])) "decompose.c":17:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 3 r3 [126])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [1 alpha+0 S4 A32])) "decompose.c":20:33 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _1 ] [114])
+                (plus:SI (reg:SI 3 r3 [126])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":20:33 1051 {*thumb2_addsi_short}
+     (nil))
+(insn 14 13 15 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [2 alpha_mask+0 S4 A32])
+        (reg:SI 3 r3 [orig:114 _1 ] [114])) "decompose.c":20:14 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 15 14 16 2 (set (reg:SI 2 r2 [orig:115 r.0_2 ] [115])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [2 r+0 S4 A32])) "decompose.c":22:12 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 3 r3 [127])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 28 [0x1c])) [2 alpha_mask+0 S4 A32])) "decompose.c":22:12 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (parallel [
+            (set (reg:SI 3 r3 [orig:116 _3 ] [116])
+                (and:SI (reg:SI 3 r3 [127])
+                    (reg:SI 2 r2 [orig:115 r.0_2 ] [115])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":22:12 1046 {*thumb2_alusi3_short}
+     (nil))
+(insn 18 17 19 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [2 lb+0 S4 A64])
+        (reg:SI 3 r3 [orig:116 _3 ] [116])) "decompose.c":22:8 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 3 r3 [128])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [1 alpha+0 S4 A32])) "decompose.c":23:22 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 20 19 21 2 (parallel [
+            (set (reg:SI 2 r2 [orig:117 _4 ] [117])
+                (ashiftrt:SI (reg:SI 3 r3 [128])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":23:22 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 3 r3 [129])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [2 lb+0 S4 A64])) "decompose.c":23:34 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (parallel [
+            (set (reg:SI 3 r3 [orig:118 _5 ] [118])
+                (plus:SI (reg:SI 3 r3 [129])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":23:34 1051 {*thumb2_addsi_short}
+     (nil))
+(insn 23 22 24 2 (parallel [
+            (set (reg:SI 3 r3 [orig:119 _6 ] [119])
+                (minus:SI (reg:SI 2 r2 [orig:117 _4 ] [117])
+                    (reg:SI 3 r3 [orig:118 _5 ] [118])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":23:28 1052 {*thumb2_subsi_short}
+     (nil))
+(insn 24 23 25 2 (parallel [
+            (set (reg:SI 3 r3 [orig:130 center_16 ] [130])
+                (ashiftrt:SI (reg:SI 3 r3 [orig:119 _6 ] [119])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":23:12 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 25 24 26 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [2 center+0 S4 A32])
+        (reg:SI 3 r3 [orig:130 center_16 ] [130])) "decompose.c":23:12 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 26 25 27 2 (set (reg:SI 2 r2 [131])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [1 alpha+0 S4 A32])) "decompose.c":24:17 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 26 28 2 (set (reg:SI 3 r3 [132])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])) [2 center+0 S4 A32])) "decompose.c":24:17 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 28 27 29 2 (parallel [
+            (set (reg:SI 3 r3 [orig:120 _7 ] [120])
+                (and:SI (reg:SI 3 r3 [132])
+                    (reg:SI 2 r2 [131])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":24:17 1046 {*thumb2_alusi3_short}
+     (nil))
+(insn 29 28 30 2 (set (reg:SI 2 r2 [134])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [2 lb+0 S4 A64])) "decompose.c":24:8 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 30 29 31 2 (parallel [
+            (set (reg:SI 3 r3 [orig:133 lb_17 ] [133])
+                (minus:SI (reg:SI 2 r2 [134])
+                    (reg:SI 3 r3 [orig:120 _7 ] [120])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":24:8 1052 {*thumb2_subsi_short}
+     (nil))
+(insn 31 30 32 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [2 lb+0 S4 A64])
+        (reg:SI 3 r3 [orig:133 lb_17 ] [133])) "decompose.c":24:8 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 32 31 33 2 (set (reg/f:SI 3 r3 [135])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [3 lowbits+0 S4 A32])) "decompose.c":25:14 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 33 32 34 2 (set (reg:SI 2 r2 [136])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 24 [0x18])) [2 lb+0 S4 A64])) "decompose.c":25:14 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 35 2 (set (mem:SI (reg/f:SI 3 r3 [135]) [2 *lowbits_19(D)+0 S4 A32])
+        (reg:SI 2 r2 [136])) "decompose.c":25:14 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 3 r3 [137])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 36 [0x24])) [1 alpha+0 S4 A32])) "decompose.c":26:29 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 36 35 37 2 (parallel [
+            (set (reg:SI 2 r2 [orig:121 _8 ] [121])
+                (ashiftrt:SI (reg:SI 3 r3 [137])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":26:29 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 37 36 38 2 (set (reg:SI 3 r3 [138])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [2 r+0 S4 A32])) "decompose.c":26:20 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 38 37 39 2 (set (reg:SI 2 r2 [orig:122 _9 ] [122])
+        (plus:SI (reg:SI 2 r2 [orig:121 _8 ] [121])
+            (reg:SI 3 r3 [138]))) "decompose.c":26:20 7 {*arm_addsi3}
+     (nil))
+(insn 39 38 40 2 (set (reg:SI 3 r3 [139])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 32 [0x20])) [1 log_alpha+0 S4 A64])) "decompose.c":26:36 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 40 39 41 2 (parallel [
+            (set (reg:SI 2 r2 [orig:123 _10 ] [123])
+                (ashiftrt:SI (reg:SI 2 r2 [orig:122 _9 ] [122])
+                    (reg:SI 3 r3 [139])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":26:36 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 41 40 42 2 (set (reg/f:SI 3 r3 [140])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [3 highbits+0 S4 A32])) "decompose.c":26:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 42 41 46 2 (set (mem:SI (reg/f:SI 3 r3 [140]) [2 *highbits_21(D)+0 S4 A32])
+        (reg:SI 2 r2 [orig:123 _10 ] [123])) "decompose.c":26:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 46 42 53 2 (const_int 0 [0]) "decompose.c":27:1 317 {nop}
+     (nil))
+(note 53 46 54 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 54 53 55 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 44 [0x2c])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":27:1 1051 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 44 [0x2c])))
+        (nil)))
+(insn 55 54 56 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "decompose.c":27:1 305 {blockage}
+     (nil))
+(insn/f 56 55 57 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "decompose.c":27:1 760 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 57 56 58 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "decompose.c":27:1 403 {force_register_use}
+     (nil))
+(insn/f 58 57 59 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [4  S4 A32])) "decompose.c":27:1 760 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 59 58 60 2 (simple_return) "decompose.c":27:1 1043 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 60 59 47)
+(note 47 60 0 NOTE_INSN_DELETED)
+
+;; Function cryptolab_haetae5_decompose_hint (cryptolab_haetae5_decompose_hint, funcdef_no=1, decl_uid=6108, cgraph_uid=2, symbol_order=1)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 29 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 29 5 30 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [4  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "decompose.c":39:57 384 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [4  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 30 29 31 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -20 [0xffffffffffffffec]))) "decompose.c":39:57 7 {*arm_addsi3}
+     (nil))
+(insn 31 30 32 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "decompose.c":39:57 385 {stack_tie}
+     (nil))
+(insn/f 32 31 33 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "decompose.c":39:57 7 {*arm_addsi3}
+     (nil))
+(note 33 32 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 33 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 highbits+0 S4 A32])
+        (reg:SI 0 r0 [ highbits ])) "decompose.c":39:57 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [2 r+0 S4 A32])
+        (reg:SI 1 r1 [ r ])) "decompose.c":39:57 760 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [117])
+        (mem/c:SI (reg/f:SI 7 r7) [2 r+0 S4 A32])) "decompose.c":42:13 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (parallel [
+            (set (reg:SI 3 r3 [orig:114 _1 ] [114])
+                (plus:SI (reg:SI 3 r3 [117])
+                    (const_int 128 [0x80])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":42:13 1051 {*thumb2_addsi_short}
+     (nil))
+(insn 9 8 10 2 (parallel [
+            (set (reg:SI 3 r3 [orig:118 hb_5 ] [118])
+                (ashiftrt:SI (reg:SI 3 r3 [orig:114 _1 ] [114])
+                    (const_int 8 [0x8])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":42:8 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [2 hb+0 S4 A32])
+        (reg:SI 3 r3 [orig:118 hb_5 ] [118])) "decompose.c":42:8 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 3 r3 [119])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [2 hb+0 S4 A32])) "decompose.c":44:32 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 3 r3 [orig:115 _2 ] [115])
+        (minus:SI (const_int 502 [0x1f6])
+            (reg:SI 3 r3 [119]))) "decompose.c":44:32 45 {*arm_subsi3_insn}
+     (nil))
+(insn 13 12 14 2 (parallel [
+            (set (reg:SI 3 r3 [orig:115 _2 ] [115])
+                (plus:SI (reg:SI 3 r3 [orig:115 _2 ] [115])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":44:32 1051 {*thumb2_addsi_short}
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg:SI 3 r3 [orig:120 edgecase_6 ] [120])
+                (ashiftrt:SI (reg:SI 3 r3 [orig:115 _2 ] [115])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":43:14 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [2 edgecase+0 S4 A64])
+        (reg:SI 3 r3 [orig:120 edgecase_6 ] [120])) "decompose.c":43:14 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 3 r3 [121])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 8 [0x8])) [2 edgecase+0 S4 A64])) "decompose.c":45:33 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 3 r3 [orig:116 _3 ] [116])
+        (and:SI (reg:SI 3 r3 [121])
+            (const_int 504 [0x1f8]))) "decompose.c":45:33 90 {*arm_andsi3_insn}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 2 r2 [123])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [2 hb+0 S4 A32])) "decompose.c":45:8 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 19 18 20 2 (parallel [
+            (set (reg:SI 3 r3 [orig:122 hb_7 ] [122])
+                (minus:SI (reg:SI 2 r2 [123])
+                    (reg:SI 3 r3 [orig:116 _3 ] [116])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":45:8 1052 {*thumb2_subsi_short}
+     (nil))
+(insn 20 19 21 2 (set (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [2 hb+0 S4 A32])
+        (reg:SI 3 r3 [orig:122 hb_7 ] [122])) "decompose.c":45:8 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 2 (set (reg/f:SI 3 r3 [124])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 highbits+0 S4 A32])) "decompose.c":47:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (set (reg:SI 2 r2 [125])
+        (mem/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])) [2 hb+0 S4 A32])) "decompose.c":47:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 27 2 (set (mem:SI (reg/f:SI 3 r3 [124]) [2 *highbits_9(D)+0 S4 A32])
+        (reg:SI 2 r2 [125])) "decompose.c":47:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 27 23 34 2 (const_int 0 [0]) "decompose.c":48:1 317 {nop}
+     (nil))
+(note 34 27 35 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 35 34 36 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 20 [0x14])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":48:1 1051 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 20 [0x14])))
+        (nil)))
+(insn 36 35 37 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "decompose.c":48:1 305 {blockage}
+     (nil))
+(insn/f 37 36 38 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "decompose.c":48:1 760 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 38 37 39 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "decompose.c":48:1 403 {force_register_use}
+     (nil))
+(insn/f 39 38 40 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [4  S4 A32])) "decompose.c":48:1 760 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 40 39 41 2 (simple_return) "decompose.c":48:1 1043 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 41 40 28)
+(note 28 41 0 NOTE_INSN_DELETED)
+
+;; Function cryptolab_haetae5_decompose_vk (cryptolab_haetae5_decompose_vk, funcdef_no=2, decl_uid=6111, cgraph_uid=3, symbol_order=2)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 37 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 37 5 38 2 (parallel [
+            (set (mem/c:BLK (pre_modify:SI (reg/f:SI 13 sp)
+                        (plus:SI (reg/f:SI 13 sp)
+                            (const_int -4 [0xfffffffffffffffc]))) [4  A8])
+                (unspec:BLK [
+                        (reg/f:SI 7 r7)
+                    ] UNSPEC_PUSH_MULT))
+        ]) "decompose.c":62:52 384 {*push_multi}
+     (expr_list:REG_FRAME_RELATED_EXPR (sequence [
+                (set/f (reg/f:SI 13 sp)
+                    (plus:SI (reg/f:SI 13 sp)
+                        (const_int -4 [0xfffffffffffffffc])))
+                (set/f (mem/c:SI (reg/f:SI 13 sp) [4  S4 A32])
+                    (reg/f:SI 7 r7))
+            ])
+        (nil)))
+(insn/f 38 37 39 2 (set (reg/f:SI 13 sp)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int -12 [0xfffffffffffffff4]))) "decompose.c":62:52 7 {*arm_addsi3}
+     (nil))
+(insn 39 38 40 2 (set (mem:BLK (scratch) [0  A8])
+        (unspec:BLK [
+                (reg/f:SI 13 sp)
+                (reg/f:SI 7 r7)
+            ] UNSPEC_PRLG_STK)) "decompose.c":62:52 385 {stack_tie}
+     (nil))
+(insn/f 40 39 41 2 (set (reg/f:SI 7 r7)
+        (plus:SI (reg/f:SI 13 sp)
+            (const_int 0 [0]))) "decompose.c":62:52 7 {*arm_addsi3}
+     (nil))
+(note 41 40 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 41 3 2 (set (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 a0+0 S4 A32])
+        (reg:SI 0 r0 [ a0 ])) "decompose.c":62:52 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 3 2 4 2 (set (mem/c:SI (reg/f:SI 7 r7) [2 a+0 S4 A32])
+        (reg:SI 1 r1 [ a ])) "decompose.c":62:52 760 {*thumb2_movsi_vfp}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 3 r3 [125])
+        (mem/c:SI (reg/f:SI 7 r7) [2 a+0 S4 A32])) "decompose.c":66:13 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 2 r2 [orig:114 _1 ] [114])
+        (and:SI (reg:SI 3 r3 [125])
+            (const_int 1 [0x1]))) "decompose.c":66:13 90 {*arm_andsi3_insn}
+     (nil))
+(insn 9 8 10 2 (set (reg/f:SI 3 r3 [126])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 a0+0 S4 A32])) "decompose.c":66:9 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 10 9 11 2 (set (mem:SI (reg/f:SI 3 r3 [126]) [2 *a0_12(D)+0 S4 A32])
+        (reg:SI 2 r2 [orig:114 _1 ] [114])) "decompose.c":66:9 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 11 10 12 2 (set (reg/f:SI 3 r3 [127])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 a0+0 S4 A32])) "decompose.c":67:5 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 2 r2 [orig:115 _2 ] [115])
+        (mem:SI (reg/f:SI 3 r3 [127]) [2 *a0_12(D)+0 S4 A32])) "decompose.c":67:5 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 3 r3 [128])
+        (mem/c:SI (reg/f:SI 7 r7) [2 a+0 S4 A32])) "decompose.c":67:16 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 14 13 15 2 (parallel [
+            (set (reg:SI 1 r1 [orig:116 _3 ] [116])
+                (ashiftrt:SI (reg:SI 3 r3 [128])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":67:16 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 15 14 16 2 (set (reg/f:SI 3 r3 [129])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 a0+0 S4 A32])) "decompose.c":67:24 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 16 15 17 2 (set (reg:SI 3 r3 [orig:117 _4 ] [117])
+        (mem:SI (reg/f:SI 3 r3 [129]) [2 *a0_12(D)+0 S4 A32])) "decompose.c":67:24 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 17 16 18 2 (parallel [
+            (set (reg:SI 3 r3 [orig:118 _5 ] [118])
+                (and:SI (reg:SI 3 r3 [orig:117 _4 ] [117])
+                    (reg:SI 1 r1 [orig:116 _3 ] [116])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":67:22 1046 {*thumb2_alusi3_short}
+     (nil))
+(insn 18 17 19 2 (parallel [
+            (set (reg:SI 3 r3 [orig:119 _6 ] [119])
+                (ashift:SI (reg:SI 3 r3 [orig:118 _5 ] [118])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":67:29 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 19 18 20 2 (parallel [
+            (set (reg:SI 2 r2 [orig:120 _7 ] [120])
+                (minus:SI (reg:SI 2 r2 [orig:115 _2 ] [115])
+                    (reg:SI 3 r3 [orig:119 _6 ] [119])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":67:9 1052 {*thumb2_subsi_short}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:SI 3 r3 [130])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 a0+0 S4 A32])) "decompose.c":67:9 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 21 20 22 2 (set (mem:SI (reg/f:SI 3 r3 [130]) [2 *a0_12(D)+0 S4 A32])
+        (reg:SI 2 r2 [orig:120 _7 ] [120])) "decompose.c":67:9 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 22 21 23 2 (set (reg/f:SI 3 r3 [131])
+        (mem/f/c:SI (plus:SI (reg/f:SI 7 r7)
+                (const_int 4 [0x4])) [3 a0+0 S4 A32])) "decompose.c":68:17 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 23 22 24 2 (set (reg:SI 3 r3 [orig:121 _8 ] [121])
+        (mem:SI (reg/f:SI 3 r3 [131]) [2 *a0_12(D)+0 S4 A32])) "decompose.c":68:17 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 24 23 25 2 (set (reg:SI 2 r2 [132])
+        (mem/c:SI (reg/f:SI 7 r7) [2 a+0 S4 A32])) "decompose.c":68:15 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 25 24 26 2 (parallel [
+            (set (reg:SI 3 r3 [orig:122 _9 ] [122])
+                (minus:SI (reg:SI 2 r2 [132])
+                    (reg:SI 3 r3 [orig:121 _8 ] [121])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":68:15 1052 {*thumb2_subsi_short}
+     (nil))
+(insn 26 25 33 2 (parallel [
+            (set (reg:SI 3 r3 [orig:123 _15 ] [123])
+                (ashiftrt:SI (reg:SI 3 r3 [orig:122 _9 ] [122])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":68:22 1047 {*thumb2_shiftsi3_short}
+     (nil))
+(insn 33 26 34 2 (set (reg/i:SI 0 r0)
+        (reg:SI 3 r3 [orig:124 <retval> ] [124])) "decompose.c":69:1 760 {*thumb2_movsi_vfp}
+     (nil))
+(insn 34 33 42 2 (use (reg/i:SI 0 r0)) "decompose.c":69:1 -1
+     (nil))
+(note 42 34 43 2 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 43 42 44 2 (parallel [
+            (set (reg/f:SI 7 r7)
+                (plus:SI (reg/f:SI 7 r7)
+                    (const_int 12 [0xc])))
+            (clobber (reg:CC 100 cc))
+        ]) "decompose.c":69:1 1051 {*thumb2_addsi_short}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 7 r7)
+            (plus:SI (reg/f:SI 7 r7)
+                (const_int 12 [0xc])))
+        (nil)))
+(insn 44 43 45 2 (unspec_volatile [
+            (const_int 0 [0])
+        ] VUNSPEC_BLOCKAGE) "decompose.c":69:1 305 {blockage}
+     (nil))
+(insn/f 45 44 46 2 (set (reg/f:SI 13 sp)
+        (reg/f:SI 7 r7)) "decompose.c":69:1 760 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (reg/f:SI 7 r7))
+        (nil)))
+(insn 46 45 47 2 (unspec:SI [
+            (reg/f:SI 13 sp)
+        ] UNSPEC_REGISTER_USE) "decompose.c":69:1 403 {force_register_use}
+     (nil))
+(insn/f 47 46 48 2 (set (reg/f:SI 7 r7)
+        (mem:SI (post_inc:SI (reg/f:SI 13 sp)) [4  S4 A32])) "decompose.c":69:1 760 {*thumb2_movsi_vfp}
+     (expr_list:REG_CFA_ADJUST_CFA (set (reg/f:SI 13 sp)
+            (plus:SI (reg/f:SI 13 sp)
+                (const_int 4 [0x4])))
+        (expr_list:REG_CFA_RESTORE (reg/f:SI 7 r7)
+            (nil))))
+(jump_insn 48 47 49 2 (simple_return) "decompose.c":69:1 1043 {*thumb2_return}
+     (nil)
+ -> simple_return)
+(barrier 49 48 36)
+(note 36 49 0 NOTE_INSN_DELETED)
